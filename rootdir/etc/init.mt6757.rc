@@ -1146,3 +1146,11 @@ on property:service.mbim.enable=1
 service mpobserver /system/bin/mpobserver
     class main
     user root
+
+# Recover the legacy MTK RIL proxy after boot and after leaving airplane mode.
+#
+# The MTK radio stack can leave Android telephony out of sync with the vendor
+# radio state. Restarting ril-proxy re-registers callbacks and restores calls.
+
+on property:sys.boot_completed=1 && property:persist.radio.airplane_mode_on=0
+    restart ril-proxy

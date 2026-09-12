@@ -328,6 +328,8 @@ PRODUCT_PACKAGES += \
     init.sony-enterprise.rc \
     init.sony-fota.rc \
     init.sony-trimarea.rc \
+    init.rilproxy-resync.rc \
+    rilproxy-resync \
     ueventd.mt6757.rc
 
 PRODUCT_COPY_FILES += \

@@ -42,7 +42,7 @@ public final class HinokiRadioBridgeService extends Service {
         if (mRadio == null) {
             mHandler.post(mConnect);
         }
-        return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     @Override

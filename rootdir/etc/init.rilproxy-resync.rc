@@ -1,0 +1,13 @@
+service rilproxy-resync /vendor/bin/rilproxy-resync
+    class late_start
+    user root
+    group root
+    seclabel u:r:rilproxy_resync:s0
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start rilproxy-resync
+
+on property:init.svc.rilproxy-resync=stopped
+    restart ril-proxy

@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter hinoki,$(TARGET_DEVICE)),)
+ifneq ($(filter hinoki teak,$(TARGET_DEVICE)),)
 
 # Compile-only descriptions of the Oreo MTK HIDL classes.  The real classes
 # are provided at runtime by mediatek-telephony-common.jar from the stock ROM.

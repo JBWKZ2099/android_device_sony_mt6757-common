@@ -10,7 +10,7 @@
         android:directBootAware="true"
         android:hasCode="true"
         android:label="Hinoki radio bridge"
-        android:persistent="true">
+        android:persistent="false">
         <uses-library
             android:name="mediatek-telephony-common"
             android:required="true" />
