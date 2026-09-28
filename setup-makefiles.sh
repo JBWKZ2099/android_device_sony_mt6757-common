@@ -36,13 +36,11 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
 write_headers "hinoki redwood teak"
 
-# Copyright headers and guards
-write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
